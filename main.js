@@ -25,9 +25,9 @@ function player_update()
 function new_image(get_image)
 {
     fabric.Image.fromURL(get_image, function(Img){
-        block_image_objectt = Img;
-        block_image_object.scaleToWidth(150);
-        block_image_object.scaleToHeight(140);
+        block_image_object = Img;
+        block_image_object.scaleToWidth(block_image_width);
+        block_image_object.scaleToHeight(block_image_height);
         block_image_object.set({
             top:player_y,
             left:player_x
@@ -50,7 +50,7 @@ block_image_height = block_image_height+10;
 document.getElementById("current_width").innerHTML = block_image_width;
 document.getElementById("current_height").innerHTML = block_image_height;
 }
-if(e.shiftkey && keyPressed == '77')
+if(e.shiftKey && keyPressed == '77')
 {
     console.log("m and shift pressed together");
 block_image_width = block_image_width-10;
